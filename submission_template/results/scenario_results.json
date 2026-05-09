@@ -1,0 +1,26 @@
+{
+  "_comment": "Replace this with your actual results. See example format below.",
+  "_example_format": {
+    "scenario_01_easy": {
+      "root_cause": "PUMP_COOLANT_FLOW",
+      "confidence": 0.92,
+      "ranked_candidates": [
+        {"signal": "PUMP_COOLANT_FLOW", "score": 0.92},
+        {"signal": "COOLANT_FLOW_RATE", "score": 0.78},
+        {"signal": "TEMP_COOLANT_OUT", "score": 0.65}
+      ],
+      "causal_graph": {
+        "nodes": ["PUMP_COOLANT_FLOW", "COOLANT_FLOW_RATE", "TEMP_COOLANT_OUT"],
+        "edges": [
+          {"source": "PUMP_COOLANT_FLOW", "target": "COOLANT_FLOW_RATE", "weight": 0.9},
+          {"source": "COOLANT_FLOW_RATE", "target": "TEMP_COOLANT_OUT", "weight": 0.85}
+        ]
+      },
+      "incident_window": {
+        "start_idx": 7500,
+        "end_idx": 15000
+      },
+      "explanation": "The coolant pump failed at 10:12:45, causing..."
+    }
+  }
+}

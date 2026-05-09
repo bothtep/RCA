@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-01-15T14:47:35.202842",
+  "n_scenarios_evaluated": 0,
+  "n_scenarios_total": 15,
+  "overall_metrics": {},
+  "grade": "F",
+  "by_difficulty": {
+    "easy": {},
+    "medium": {},
+    "hard": {}
+  },
+  "scenario_details": [
+    {
+      "scenario": "scenario_01_easy",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_02_easy",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_03_easy",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_04_easy",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_05_easy",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_06_medium",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_07_medium",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_08_medium",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_09_medium",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_10_medium",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_11_hard",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_12_hard",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_13_hard",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_14_hard",
+      "status": "missing",
+      "metrics": null
+    },
+    {
+      "scenario": "scenario_15_control",
+      "status": "missing",
+      "metrics": null
+    }
+  ],
+  "thresholds": {
+    "A": {
+      "root_cause_accuracy": 0.8,
+      "top_3_recall": 0.95,
+      "graph_f1": 0.75
+    },
+    "B": {
+      "root_cause_accuracy": 0.65,
+      "top_3_recall": 0.85,
+      "graph_f1": 0.6
+    },
+    "C": {
+      "root_cause_accuracy": 0.5,
+      "top_3_recall": 0.7,
+      "graph_f1": 0.45
+    },
+    "D": {
+      "root_cause_accuracy": 0.35,
+      "top_3_recall": 0.55,
+      "graph_f1": 0.3
+    }
+  }
+}
