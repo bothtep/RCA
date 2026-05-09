@@ -1,0 +1,58 @@
+{
+  "description": "Expected baseline performance for comparison",
+  "baselines": {
+    "baseline_1_naive_correlation": {
+      "expected_root_cause_accuracy": 0.35,
+      "expected_top_3_recall": 0.55,
+      "expected_mrr": 0.42,
+      "notes": "Weak baseline - does not consider temporal order"
+    },
+    "baseline_2_zscore_temporal": {
+      "expected_root_cause_accuracy": 0.60,
+      "expected_top_3_recall": 0.75,
+      "expected_mrr": 0.65,
+      "notes": "Medium baseline - uses z-score + first-to-change ordering"
+    },
+    "baseline_3_clustering_granger": {
+      "expected_root_cause_accuracy": 0.75,
+      "expected_top_3_recall": 0.90,
+      "expected_mrr": 0.80,
+      "notes": "Strong baseline - uses clustering + Granger causality"
+    }
+  },
+  "student_targets": {
+    "minimum_passing": {
+      "root_cause_accuracy": 0.35,
+      "top_3_recall": 0.55,
+      "description": "Must beat naive baseline for D grade"
+    },
+    "good": {
+      "root_cause_accuracy": 0.65,
+      "top_3_recall": 0.85,
+      "description": "B grade - solid implementation"
+    },
+    "excellent": {
+      "root_cause_accuracy": 0.80,
+      "top_3_recall": 0.95,
+      "description": "A grade - beats strong baseline"
+    }
+  },
+  "scenario_difficulty_expectations": {
+    "easy": {
+      "expected_accuracy_range": [0.80, 1.00],
+      "notes": "Single clear root cause, should get most of these correct"
+    },
+    "medium": {
+      "expected_accuracy_range": [0.50, 0.80],
+      "notes": "Longer cascades, some noise, requires better algorithms"
+    },
+    "hard": {
+      "expected_accuracy_range": [0.25, 0.60],
+      "notes": "Ambiguous cases, competing causes, hidden confounders"
+    },
+    "control": {
+      "expected_accuracy_range": [0.80, 1.00],
+      "notes": "Should NOT identify a root cause (false positive test)"
+    }
+  }
+}

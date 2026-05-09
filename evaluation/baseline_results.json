@@ -1,0 +1,435 @@
+{
+  "summary": [
+    {
+      "baseline": "Baseline 1: Naive Correlation",
+      "root_cause_accuracy": 0.0,
+      "top3_recall": 0.06666666666666667,
+      "mrr": 0.03333333333333333
+    },
+    {
+      "baseline": "Baseline 2: Z-Score Temporal",
+      "root_cause_accuracy": 0.0,
+      "top3_recall": 0.06666666666666667,
+      "mrr": 0.04666666666666666
+    },
+    {
+      "baseline": "Baseline 3: Clustering + Granger",
+      "root_cause_accuracy": 0.06666666666666667,
+      "top3_recall": 0.13333333333333333,
+      "mrr": 0.13888888888888887
+    }
+  ],
+  "detailed_results": {
+    "Baseline 1: Naive Correlation": [
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_01_easy",
+        "predicted": "VOLTAGE_CELL_05",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_02_easy",
+        "predicted": "TEMP_BATTERY_CELL_05",
+        "actual": "VOLTAGE_CELL_03"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_03_easy",
+        "predicted": "VOLTAGE_CELL_05",
+        "actual": "MOTOR_TORQUE"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_04_easy",
+        "predicted": "VOLTAGE_CELL_08",
+        "actual": "FAN_SPEED_RADIATOR"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_05_easy",
+        "predicted": "CURRENT_MOTOR_PHASE_A",
+        "actual": "VOLTAGE_HV_BUS"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_06_medium",
+        "predicted": "TEMP_MOTOR_STATOR",
+        "actual": "VALVE_THERMAL_POSITION"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 1.0,
+        "mrr": 0.5,
+        "is_control": false,
+        "scenario": "scenario_07_medium",
+        "predicted": "TEMP_BATTERY_CELL_07",
+        "actual": "TEMP_BATTERY_CELL_05"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_08_medium",
+        "predicted": "VOLTAGE_CELL_01",
+        "actual": "VIBRATION_MOTOR_X"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_09_medium",
+        "predicted": "TEMP_COOLANT_OUT",
+        "actual": "ISOLATION_RESISTANCE"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_10_medium",
+        "predicted": "TEMP_BATTERY_CELL_05",
+        "actual": "VOLTAGE_CELL_02"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_11_hard",
+        "predicted": "CURRENT_MOTOR_PHASE_C",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_12_hard",
+        "predicted": "VIBRATION_MOTOR_Y",
+        "actual": "TEMP_COOLANT_IN"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_13_hard",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "VALVE_THERMAL_POSITION"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_14_hard",
+        "predicted": "CONTACTOR_STATE_POS",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": true,
+        "scenario": "scenario_15_control",
+        "predicted": "ISOLATION_RESISTANCE",
+        "actual": null
+      }
+    ],
+    "Baseline 2: Z-Score Temporal": [
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_01_easy",
+        "predicted": "TEMP_MOTOR_STATOR",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_02_easy",
+        "predicted": "TEMP_MOTOR_ROTOR",
+        "actual": "VOLTAGE_CELL_03"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_03_easy",
+        "predicted": "SOH_BATTERY",
+        "actual": "MOTOR_TORQUE"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 1.0,
+        "mrr": 0.5,
+        "is_control": false,
+        "scenario": "scenario_04_easy",
+        "predicted": "CURRENT_MOTOR_PHASE_A",
+        "actual": "FAN_SPEED_RADIATOR"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_05_easy",
+        "predicted": "TEMP_BATTERY_CELL_03",
+        "actual": "VOLTAGE_HV_BUS"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_06_medium",
+        "predicted": "VOLTAGE_CELL_04",
+        "actual": "VALVE_THERMAL_POSITION"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_07_medium",
+        "predicted": "VOLTAGE_CELL_03",
+        "actual": "TEMP_BATTERY_CELL_05"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_08_medium",
+        "predicted": "TEMP_BATTERY_CELL_05",
+        "actual": "VIBRATION_MOTOR_X"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_09_medium",
+        "predicted": "TEMP_BATTERY_CELL_01",
+        "actual": "ISOLATION_RESISTANCE"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_10_medium",
+        "predicted": "TEMP_COOLANT_OUT",
+        "actual": "VOLTAGE_CELL_02"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_11_hard",
+        "predicted": "CURRENT_MOTOR_PHASE_A",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.2,
+        "is_control": false,
+        "scenario": "scenario_12_hard",
+        "predicted": "TEMP_MOTOR_ROTOR",
+        "actual": "TEMP_COOLANT_IN"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_13_hard",
+        "predicted": "TEMP_MOTOR_STATOR",
+        "actual": "VALVE_THERMAL_POSITION"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_14_hard",
+        "predicted": null,
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": true,
+        "scenario": "scenario_15_control",
+        "predicted": "CURRENT_MOTOR_PHASE_C",
+        "actual": null
+      }
+    ],
+    "Baseline 3: Clustering + Granger": [
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.25,
+        "is_control": false,
+        "scenario": "scenario_01_easy",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_02_easy",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "VOLTAGE_CELL_03"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 1.0,
+        "mrr": 0.3333333333333333,
+        "is_control": false,
+        "scenario": "scenario_03_easy",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "MOTOR_TORQUE"
+      },
+      {
+        "root_cause_match": 1.0,
+        "top3_match": 1.0,
+        "mrr": 1.0,
+        "is_control": false,
+        "scenario": "scenario_04_easy",
+        "predicted": "FAN_SPEED_RADIATOR",
+        "actual": "FAN_SPEED_RADIATOR"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.25,
+        "is_control": false,
+        "scenario": "scenario_05_easy",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "VOLTAGE_HV_BUS"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_06_medium",
+        "predicted": "FAN_SPEED_RADIATOR",
+        "actual": "VALVE_THERMAL_POSITION"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_07_medium",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "TEMP_BATTERY_CELL_05"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_08_medium",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "VIBRATION_MOTOR_X"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.25,
+        "is_control": false,
+        "scenario": "scenario_09_medium",
+        "predicted": "CONTACTOR_STATE_POS",
+        "actual": "ISOLATION_RESISTANCE"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_10_medium",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "VOLTAGE_CELL_02"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_11_hard",
+        "predicted": "FAN_SPEED_RADIATOR",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_12_hard",
+        "predicted": "FAN_SPEED_RADIATOR",
+        "actual": "TEMP_COOLANT_IN"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_13_hard",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "VALVE_THERMAL_POSITION"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": false,
+        "scenario": "scenario_14_hard",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": "PUMP_COOLANT_FLOW"
+      },
+      {
+        "root_cause_match": 0.0,
+        "top3_match": 0.0,
+        "mrr": 0.0,
+        "is_control": true,
+        "scenario": "scenario_15_control",
+        "predicted": "MOTOR_SPEED_RPM",
+        "actual": null
+      }
+    ]
+  }
+}
